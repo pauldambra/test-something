@@ -10,7 +10,7 @@ jobs:
         name: Report age of PR
         runs-on: ubuntu-20.04
 #         if: github.event.pull_request.merged == true
-          steps:
+        steps:
             - name: get PR age
               run: |
                   pr_age=$((($(date '+%s') - $(date -d "${{ github.event.pull_request.created_at }}" '+%s'))))

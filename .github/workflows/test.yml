@@ -13,8 +13,8 @@ jobs:
         steps:
             - name: get PR age
                 run: |
-                pr_age=$((($(date '+%s') - $(date -d "${{ github.event.pull_request.created_at }}" '+%s'))))
-                echo pr_age=$pr_age >> $GITHUB_ENV
+                    pr_age=$((($(date '+%s') - $(date -d "${{ github.event.pull_request.created_at }}" '+%s'))))
+                    echo pr_age=$pr_age >> $GITHUB_ENV
             - name: something
               run: |
                 echo ${{ env.pr_age }}

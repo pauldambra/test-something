@@ -12,8 +12,7 @@ jobs:
 #         if: github.event.pull_request.merged == true
         steps:
             - name: something
-              run: |
-                echo ${{ env }}
+              run: echo "$GITHUB_CONTEXT"
 
 #             - name: capture PR age to PostHog
 #             uses: PostHog/posthog-github-action@v0.1

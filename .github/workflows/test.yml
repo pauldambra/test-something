@@ -14,6 +14,7 @@ jobs:
             - name: something
               run: |
                 echo ${{ github.event.pull_request.created_at }}
+                echo "$((($(date '+%s') - $(date -d "${{ github.event.pull_request.created_at }}" '+%s'))))"
                 echo '${{ toJSON(github) }}'
 
 #             - name: capture PR age to PostHog

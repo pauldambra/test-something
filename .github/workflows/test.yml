@@ -2,8 +2,8 @@ name: Report PR Age
 
 on:
     pull_request:
-        types:
-            - closed
+#         types:
+#             - closed
 
 jobs:
     report-pr-age:

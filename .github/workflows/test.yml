@@ -18,7 +18,7 @@ jobs:
             - name: capture PR age to PostHog
               uses: PostHog/posthog-github-action@v0.1
               with:
-                  posthog-token: ${{secrets.POSTHOG_API_TOKEN}}
+                  posthog-token: phc_DumQNjXoXRQpyaus5OM861c3BEYtwwKyzVTNmPs1XIt
                   event: 'posthog-ci-pr-age-when-closed'
                   properties: '{"prAgeInSeconds": ${{ env.pr_age }}}'
 

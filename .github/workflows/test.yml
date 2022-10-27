@@ -13,7 +13,7 @@ jobs:
         steps:
             - name: something
               run: |
-                echo ${{ env.github_event_path }}
+                echo ${{ env }}
 
 #             - name: capture PR age to PostHog
 #             uses: PostHog/posthog-github-action@v0.1

@@ -13,7 +13,7 @@ jobs:
         steps:
             -name: phc_
             run: |
-            echo ${{ github.event.pull_request }}
+                echo ${{ github.event.pull_request }}
 
 #             - name: capture PR age to PostHog
 #             uses: PostHog/posthog-github-action@v0.1

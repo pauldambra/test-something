@@ -1,0 +1,24 @@
+name: Report PR Age
+
+on:
+    pull_request:
+        types:
+            - closed
+
+jobs:
+    report-pr-age:
+        name: Report age of PR
+        runs-on: ubuntu-20.04
+        if: github.event.pull_request.merged == true
+        steps:
+            -name: phc_
+            run: |
+            echo ${{ github.event.pull_request }}
+
+#             - name: capture PR age to PostHog
+#             uses: PostHog/posthog-github-action@v0.1
+#             with:
+    #                 posthog-token: phc_DumQNjXoXRQpyaus5OM861c3BEYtwwKyzVTNmPs1XIt
+    #                 event: 'posthog-ci-pr-age-when-closed'
+    #                 properties: ''
+

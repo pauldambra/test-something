@@ -12,7 +12,7 @@ jobs:
 #         if: github.event.pull_request.merged == true
         steps:
             - name: something
-              run: echo "$GITHUB_CONTEXT"
+              run: echo '${{ toJSON(github) }}'
 
 #             - name: capture PR age to PostHog
 #             uses: PostHog/posthog-github-action@v0.1
